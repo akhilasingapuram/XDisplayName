@@ -23,6 +23,7 @@ const DisplayName = () => {
         <input
           type="text"
           value={firstName}
+          defaultValue=""
           onChange={(e) => setFirstName(e.target.value)}
         />
         <div>
@@ -30,14 +31,13 @@ const DisplayName = () => {
           <input
             type="text"
             value={lastName}
+            defaultValue=""
             onChange={(e) => setLastName(e.target.value)}
           />
         </div>
-        <button type="submit" disabled={!isFormValid}>
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
-      {fullName && <h2>FullName: {fullName}</h2>}
+      {fullName && <h2>Full Name: {fullName}</h2>}
     </div>
   );
 };
